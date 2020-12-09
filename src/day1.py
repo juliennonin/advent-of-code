@@ -1,14 +1,20 @@
 # %%
 import bisect
 
+def bisect_in(a, x):
+    i = bisect.bisect_left(a, x)
+    return i != len(a) and a[i] == x
+
+
 # %% Part 1
 def find_two_entries_that_sum_to_N(entries, N=2020):
-    seen_entries = set()
+    seen_entries = []  # kept it sorted
     for entry in entries:
-        if N - entry in seen_entries:
+        if bisect_in(seen_entries, N - entry):
             return entry * (N - entry)
         else:
-            seen_entries.add(entry)
+            bisect.insort(seen_entries, entry)
+    return False
 
 # %% Part 2
 def find_three_entries_that_sum_to_N(entries, N=2020):
