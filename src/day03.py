@@ -26,7 +26,7 @@ def prod(L):
 if __name__ == '__main__':
     from os.path import dirname, join, realpath
     folder = join(dirname(dirname(realpath(__file__))), "data")
-    with open(f"{folder}/day3.txt") as f:
+    with open(f"{folder}/day03.txt") as f:
         M = f.read().splitlines()
     
     print("Part 1 —", *nb_of_trees_in_multiple_slopes(M, [(3, 1)]))

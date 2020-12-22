@@ -38,7 +38,7 @@ def fix_instructions(instructions):
 if __name__ == "__main__":
     from os.path import dirname, join, realpath, basename
     folder = join(dirname(dirname(realpath(__file__))), "data")
-    instructions = parser(f"{folder}/day8.txt")
+    instructions = parser(f"{folder}/day08.txt")
 
     _, accumulator = run_instructions(instructions)
     print("Part 1 —", accumulator)

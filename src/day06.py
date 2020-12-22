@@ -15,7 +15,7 @@ if __name__ == "__main__":
     from os.path import dirname, join, realpath
     folder = join(dirname(dirname(realpath(__file__))), "data")
     
-    with open(f"{folder}/day6.txt") as f:
+    with open(f"{folder}/day06.txt") as f:
         data = f.read().split("\n\n")
     
     print("Part 1 —", sum(count_any(group) for group in data))

@@ -15,7 +15,7 @@ def pwd_checker_toboggan(pos1, pos2, letter, pwd):
 if __name__ == '__main__':
     from os.path import dirname, join, realpath
     folder = join(dirname(dirname(realpath(__file__))), "data")
-    with open(f"{folder}/day2.txt") as f:
+    with open(f"{folder}/day02.txt") as f:
         data = f.read().splitlines()
     print("Part 1 —", sum(pwd_checker_sled(*parser(line)) for line in data))
     print("Part 2 —", sum(pwd_checker_toboggan(*parser(line)) for line in data))

@@ -25,7 +25,7 @@ if __name__ == '__main__':
     folder = join(dirname(dirname(realpath(__file__))), "data")
     
     N = 25
-    data = loadtxt(f"{folder}/day9.txt", dtype=int)
+    data = loadtxt(f"{folder}/day09.txt", dtype=int)
     weakness = find_not_sum_of_N_previous_numbers(data, N)
     subset = find_continuous_subset_that_sums_to_k(data, weakness)
     

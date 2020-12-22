@@ -28,7 +28,7 @@ if __name__ == "__main__":
     from os.path import dirname, join, realpath
     folder = join(dirname(dirname(realpath(__file__))), "data")
     
-    with open(f"{folder}/day5.txt") as f:
+    with open(f"{folder}/day05.txt") as f:
         passes = f.read().splitlines()
 
     print("Part 1 —", max(get_position_and_id(seat)[2] for seat in passes))

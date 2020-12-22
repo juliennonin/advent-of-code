@@ -36,7 +36,7 @@ if __name__ == "__main__":
     from os.path import dirname, join, realpath
     import numpy as np
     folder = join(dirname(dirname(realpath(__file__))), "data")
-    expenses = np.loadtxt(f"{folder}/day1.txt", dtype=int)
+    expenses = np.loadtxt(f"{folder}/day01.txt", dtype=int)
 
     print("Part 1 —", find_two_entries_that_sum_to_N(expenses))
     print("Part 2 —", find_three_entries_that_sum_to_N(expenses))

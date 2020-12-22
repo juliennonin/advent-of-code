@@ -37,7 +37,7 @@ def passport_checker(passport, constraints, opt_fields={'cid'}):
 if __name__ == "__main__":
     from os.path import dirname, join, realpath
     folder = join(dirname(dirname(realpath(__file__))), "data")
-    passports = parser(f"{folder}/day4.txt")
+    passports = parser(f"{folder}/day04.txt")
 
     print("Part 1 —",
         sum(passport_checker(p, no_constraints) for p in passports))
