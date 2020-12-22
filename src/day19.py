@@ -1,5 +1,6 @@
 #%%
 from itertools import product
+from utils import memoize
 import time
 
 # %%
@@ -20,14 +21,6 @@ def parser(filename):
     return rules, data
 
 # %%
-def memoize(f):
-    mem = {}
-    def wrap(x, *args, **kwargs):
-        if x not in mem:
-            mem[x] = f(x, *args, **kwargs)
-        return mem[x]
-    return wrap
-
 @memoize
 def find(i, rules):
     if isinstance(rules[i], str):
